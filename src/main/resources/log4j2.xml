@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <File name="File" fileName="logs.log" immediateFlush="true">
+            <PatternLayout pattern="%msg||%d{yyy-MM-dd, H:mm:ss} || %-5level %n"/>
+        </File>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="%msg||%d{yyy-MM-dd, H:mm:ss} || %-5level %n"/>
+        </Console>
+    </Appenders>
+    <loggers>
+        <Root level="all">
+            <AppenderRef ref="File"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </loggers>
+</Configuration>
